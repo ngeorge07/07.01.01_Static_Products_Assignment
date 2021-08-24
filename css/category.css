@@ -1,0 +1,22 @@
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  width: 100%;
+  justify-content: space-evenly;
+}
+
+ul > li > a {
+  text-decoration: none;
+  color: black;
+}
+
+#current-page {
+  color: red;
+}
