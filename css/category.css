@@ -6,9 +6,26 @@ header {
 
 body {
   margin: 0;
+  background-color: #ebeff0;
+}
+
+h1 {
+  font-family: brother-1816, sans-serif;
+  font-weight: 800;
+  font-style: normal;
+  font-size: 3rem;
+  margin-bottom: 0;
+  color: #b22e8d;
 }
 
 ul {
+  font-family: brother-1816, sans-serif;
+  font-weight: 500;
+  font-style: normal;
+
+  background-color: #f585493b;
+
+  font-size: 1.5rem;
   list-style-type: none;
   padding: 0;
   display: flex;
@@ -18,11 +35,11 @@ ul {
 
 ul > li > a {
   text-decoration: none;
-  color: black;
+  color: #b93c96d6;
 }
 
 #current-page {
-  color: red;
+  color: #ef27a6;
 }
 
 main {
@@ -35,22 +52,29 @@ main {
 
 .box {
   width: 100%;
+  opacity: 0.7;
 }
 
 .dis-column {
   display: flex;
   flex-direction: column;
-  /* box-shadow: 9px 8px 0 1px rgba(0, 0, 0, 0.9); */
   padding: 0;
   margin: 0;
-  color: black;
+  position: relative;
+  text-align: center;
 }
 
-.project-nav {
+main > a:hover .box {
+  opacity: 1;
+}
+
+a > p {
   font-family: video, serif;
   font-weight: 400;
   font-style: normal;
-  font-size: clamp(1.5rem, 3vw, 3rem);
+  font-size: clamp(1.5rem, 3vw, 5rem);
+  color: #ef27a6;
+
   padding: 3% 0 3% 2vw;
   margin: 0;
   position: absolute;
@@ -59,9 +83,15 @@ main {
   transform: translate(-50%, -50%);
 }
 
-main > a {
-  position: relative;
-  text-align: center;
+main > a:hover {
+  opacity: 1;
+}
+
+@media only screen and (max-width: 650px) {
+  ul {
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
 @media only screen and (max-width: 900px) {
