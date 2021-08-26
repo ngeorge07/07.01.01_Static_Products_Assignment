@@ -1,0 +1,61 @@
+body {
+  overflow-x: hidden;
+}
+
+main {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 300px));
+  gap: 2rem;
+  justify-content: center;
+  margin: calc((100vh / 25) * 1.563) calc((100vw / 25) * 1.563);
+}
+
+.item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  text-decoration: none;
+}
+
+.item > * {
+  margin: 0;
+}
+
+small {
+  color: gray;
+}
+
+.sale {
+  color: #ef27a6;
+  margin-right: 1rem;
+}
+
+.cut {
+  margin-left: 0.5rem;
+  text-decoration: line-through;
+  color: gray;
+  opacity: 0.8;
+  font-size: initial;
+}
+
+h3 {
+  color: black;
+}
+
+.item > p {
+  color: #ef27a6;
+  font-weight: 900;
+  font-size: 1.3rem;
+}
+
+.soldOut::before {
+  content: "Sold Out";
+  position: absolute;
+  background: #272727;
+  color: #ebeff0;
+  padding: 1rem;
+}
+
+.soldOut > img {
+  opacity: 0.5;
+}
