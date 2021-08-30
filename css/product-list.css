@@ -59,3 +59,7 @@ h3 {
 .soldOut > img {
   opacity: 0.5;
 }
+
+.hidden {
+  visibility: hidden;
+}
