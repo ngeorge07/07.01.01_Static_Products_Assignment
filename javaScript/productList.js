@@ -1,4 +1,4 @@
-const url = "https://kea-alt-del.dk/t7/api/products";
+const url = "https://kea-alt-del.dk/t7/api/products/";
 
 fetch(url)
   .then(function (res) {
@@ -20,6 +20,10 @@ function showProduct(product) {
   const clone = template.cloneNode(true);
 
   //change content
+  clone
+    .querySelector("a")
+    .setAttribute("href", "product-page.html?id=" + product.id);
+
   clone.querySelector(
     ".item img"
   ).src = `https://kea-alt-del.dk/t7/images/webp/1000/${product.id}.webp`;
