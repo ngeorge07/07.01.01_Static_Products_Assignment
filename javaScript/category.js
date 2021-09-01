@@ -1,10 +1,10 @@
 const url = "https://kea-alt-del.dk/t7/api/seasons/";
 
 const images = [
-  "../images/kacket-stock.jpg",
-  "../images/backpack-stock.jpg",
-  "../images/tshirt-stock.jpg",
-  "../images/t-shirt-test.jpg",
+  "../images/fall.jpg",
+  "../images/spring.jpg",
+  "../images/summer.jpg",
+  "../images/winter.jpg",
 ];
 
 fetch(url)
