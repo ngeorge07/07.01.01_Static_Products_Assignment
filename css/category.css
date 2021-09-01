@@ -28,7 +28,7 @@ main > a:hover .box {
   opacity: 1;
 }
 
-a > p {
+main a {
   font-family: video, serif;
   font-weight: 400;
   font-style: normal;
