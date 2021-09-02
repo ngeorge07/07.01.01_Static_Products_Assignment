@@ -8,12 +8,8 @@ const images = [
 ];
 
 fetch(url)
-  .then(function (res) {
-    return res.json();
-  })
-  .then(function (data) {
-    handleCategory(data);
-  });
+  .then((res) => res.json())
+  .then((data) => handleCategory(data));
 
 function handleCategory(data) {
   data.forEach(showCateory);
