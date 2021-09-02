@@ -25,6 +25,10 @@ function showBrand(product) {
   const template = document.querySelector("template").content;
   const clone = template.cloneNode(true);
 
+  clone
+    .querySelector("a")
+    .setAttribute("href", "product-list.html?brandname=" + product.brandname);
+
   clone.querySelector("a").textContent = product.brandname;
 
   document.querySelector("ul").appendChild(clone);

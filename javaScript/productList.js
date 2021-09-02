@@ -2,10 +2,13 @@ const urlParams = new URLSearchParams(window.location.search);
 let url;
 const season = urlParams.get("season");
 const type = urlParams.get("articletype");
+const brand = urlParams.get("brandname");
 
-if (type === null) {
+if (type === null && brand === null) {
   url = "https://kea-alt-del.dk/t7/api/products?season=" + season;
-} else url = "https://kea-alt-del.dk/t7/api/products?articletype=" + type;
+} else if (season === null && brand === null) {
+  url = "https://kea-alt-del.dk/t7/api/products?articletype=" + type;
+} else url = "https://kea-alt-del.dk/t7/api/products?brandname=" + brand;
 
 fetch(url)
   .then(function (res) {
