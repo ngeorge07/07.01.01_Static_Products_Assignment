@@ -1,6 +1,11 @@
 const urlParams = new URLSearchParams(window.location.search);
+let url;
 const season = urlParams.get("season");
-const url = "https://kea-alt-del.dk/t7/api/products?season=" + season;
+const type = urlParams.get("articletype");
+
+if (type === null) {
+  url = "https://kea-alt-del.dk/t7/api/products?season=" + season;
+} else url = "https://kea-alt-del.dk/t7/api/products?articletype=" + type;
 
 fetch(url)
   .then(function (res) {

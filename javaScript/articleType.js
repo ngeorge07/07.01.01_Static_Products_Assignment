@@ -25,6 +25,12 @@ function showType(product) {
   const template = document.querySelector("template").content;
   const clone = template.cloneNode(true);
 
+  clone
+    .querySelector("a")
+    .setAttribute(
+      "href",
+      "product-list.html?articletype=" + product.articletype
+    );
   clone.querySelector("a").textContent = product.articletype;
 
   document.querySelector("ul").appendChild(clone);
