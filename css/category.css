@@ -1,9 +1,8 @@
 main {
   display: grid;
   margin: 2rem 5rem;
-  grid-column-gap: 5%;
-  grid-row-gap: 3%;
-  grid-template-columns: repeat(auto-fit, minmax(26vw, 1fr));
+  grid-gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(30vw, 1fr));
 }
 
 #current-page {
@@ -32,10 +31,9 @@ main p {
   font-family: video, serif;
   font-weight: 400;
   font-style: normal;
-  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-size: clamp(2.5rem, 8vw, 4.5rem);
   color: #ef27a6;
 
-  padding: 3% 0 3% 2vw;
   margin: 0;
   position: absolute;
   top: 50%;

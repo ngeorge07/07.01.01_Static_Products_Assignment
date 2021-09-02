@@ -18,7 +18,7 @@ function showProduct(product) {
 
   document.querySelector("dd:nth-child(4)").textContent = product.basecolour;
 
-  document.querySelector("dl .season").innerHTML = product.season;
+  document.querySelector("dl .season").textContent = product.season;
 
   if (product.discount != null) {
     x = (product.price * product.discount) / 100;
