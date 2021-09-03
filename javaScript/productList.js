@@ -7,11 +7,11 @@ const brand = urlParams.get("brandname");
 const hTemplate = document.querySelector(".hTemplate").content;
 const hClone = hTemplate.cloneNode(true);
 
-if (type === null && brand === null) {
+if (season) {
   url = "https://kea-alt-del.dk/t7/api/products?season=" + season;
   hClone.querySelector("h2").textContent = season;
   document.querySelector("a:first-child").classList.add("current-page");
-} else if (season === null && brand === null) {
+} else if (type) {
   url = "https://kea-alt-del.dk/t7/api/products?articletype=" + type;
   hClone.querySelector("h2").textContent = type;
   document.querySelector("a:nth-child(2)").classList.add("current-page");

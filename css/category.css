@@ -1,29 +1,25 @@
-main {
+.category main {
   display: grid;
   margin: 2rem 5rem;
   grid-gap: 2rem;
   grid-template-columns: repeat(auto-fit, minmax(30vw, 1fr));
 }
 
-.box {
-  width: 100%;
-  opacity: 0.8;
-}
-
-.dis-column {
+.category a {
   display: flex;
   flex-direction: column;
   padding: 0;
   margin: 0;
   position: relative;
   text-align: center;
+  opacity: 0.8;
 }
 
-main > a:hover .box {
+.category a:hover {
   opacity: 1;
 }
 
-main p {
+.category p {
   font-family: video, serif;
   font-weight: 400;
   font-style: normal;
@@ -37,19 +33,8 @@ main p {
   transform: translate(-50%, -50%);
 }
 
-main > a:hover {
-  opacity: 1;
-}
-
 @media only screen and (max-width: 900px) {
-  main {
+  .category main {
     grid-template-columns: repeat(auto-fit, minmax(35vw, 1fr));
   }
 }
-
-/* footer {
-  background-color: black;
-  color: white;
-  text-align: center;
-  height: 100%;
-} */
