@@ -4,11 +4,21 @@ const season = urlParams.get("season");
 const type = urlParams.get("articletype");
 const brand = urlParams.get("brandname");
 
+const hTemplate = document.querySelector(".hTemplate").content;
+const hClone = hTemplate.cloneNode(true);
+
 if (type === null && brand === null) {
   url = "https://kea-alt-del.dk/t7/api/products?season=" + season;
+  hClone.querySelector("h2").textContent = season;
 } else if (season === null && brand === null) {
   url = "https://kea-alt-del.dk/t7/api/products?articletype=" + type;
-} else url = "https://kea-alt-del.dk/t7/api/products?brandname=" + brand;
+  hClone.querySelector("h2").textContent = type;
+} else {
+  url = "https://kea-alt-del.dk/t7/api/products?brandname=" + brand;
+  hClone.querySelector("h2").textContent = brand;
+}
+
+document.querySelector("header").appendChild(hClone);
 
 fetch(url)
   .then(function (res) {
@@ -24,7 +34,7 @@ function handleProductList(data) {
 
 function showProduct(product) {
   //grab template
-  const template = document.querySelector("#listTemplate").content;
+  const template = document.querySelector(".listTemplate").content;
 
   //clone it
   const clone = template.cloneNode(true);

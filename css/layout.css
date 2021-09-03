@@ -49,6 +49,10 @@ h2 {
   text-align: center;
 }
 
+#current-page {
+  color: #ef27a6;
+}
+
 @media only screen and (max-width: 640px) {
   nav {
     flex-direction: column;

@@ -5,10 +5,6 @@ main {
   grid-template-columns: repeat(auto-fit, minmax(30vw, 1fr));
 }
 
-#current-page {
-  color: #ef27a6;
-}
-
 .box {
   width: 100%;
   opacity: 0.8;
