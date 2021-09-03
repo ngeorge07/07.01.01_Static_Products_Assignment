@@ -8,6 +8,8 @@ fetch(url)
 
 function showProduct(product) {
   console.log(product);
+  document.querySelector("a:last-child").textContent =
+    product.productdisplayname;
   let x;
   document.querySelector("dl .brand").textContent = product.brandname;
 
