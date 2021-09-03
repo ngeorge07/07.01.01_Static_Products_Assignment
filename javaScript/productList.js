@@ -10,12 +10,15 @@ const hClone = hTemplate.cloneNode(true);
 if (type === null && brand === null) {
   url = "https://kea-alt-del.dk/t7/api/products?season=" + season;
   hClone.querySelector("h2").textContent = season;
+  document.querySelector("a:first-child").classList.add("current-page");
 } else if (season === null && brand === null) {
   url = "https://kea-alt-del.dk/t7/api/products?articletype=" + type;
   hClone.querySelector("h2").textContent = type;
+  document.querySelector("a:nth-child(2)").classList.add("current-page");
 } else {
   url = "https://kea-alt-del.dk/t7/api/products?brandname=" + brand;
   hClone.querySelector("h2").textContent = brand;
+  document.querySelector("a:last-child").classList.add("current-page");
 }
 
 document.querySelector("header").appendChild(hClone);
