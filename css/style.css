@@ -25,7 +25,7 @@
   font-weight: 400;
   font-style: normal;
   font-size: clamp(2.5rem, 8vw, 4.5rem);
-  color: #ef27a6;
+  color: var(--impact-pink);
 
   margin: 0;
   position: absolute;
@@ -69,7 +69,7 @@ small {
 }
 
 .sale {
-  color: #ef27a6;
+  color: var(--impact-pink);
   margin-right: 1rem;
 }
 
@@ -86,7 +86,7 @@ h4 {
 }
 
 .item p {
-  color: #ef27a6;
+  color: var(--impact-pink);
   font-weight: 900;
   font-size: 1.3rem;
 }
@@ -149,7 +149,7 @@ h3 {
 }
 
 .info p {
-  color: #ef27a6;
+  color: var(--impact-pink);
   font-size: 1.7rem;
 }
 
@@ -172,7 +172,7 @@ button {
   border-radius: 10px;
   background-color: #f549a879;
   border: 2px solid #fcd1d1;
-  color: #9b2479;
+  color: var(--impact-pink);
   text-decoration: none;
   font-weight: bold;
   margin-bottom: 1rem;
@@ -205,5 +205,37 @@ button {
     flex-direction: column;
     align-items: center;
     text-align: center;
+  }
+}
+
+/* LISTS pages */
+.list ul {
+  font-family: video, serif;
+  font-weight: 400;
+  font-style: normal;
+  color: var(--impact-pink);
+  column-count: 3;
+  margin-left: auto;
+}
+
+.list ul a {
+  color: var(--impact-pink);
+  font-size: 2rem;
+  text-decoration: none;
+}
+
+.list ul a:hover {
+  text-decoration: underline;
+}
+
+@media only screen and (max-width: 1200px) {
+  .list ul {
+    column-count: 2;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .list ul {
+    column-count: 1;
   }
 }
