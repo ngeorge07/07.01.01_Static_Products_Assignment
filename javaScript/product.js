@@ -23,8 +23,10 @@ function showProduct(product) {
   document.querySelector("dl .season").textContent = product.season;
 
   if (product.discount != null) {
-    x = (product.price * product.discount) / 100;
-  } else x = product.price;
+    x = `${(product.price - (product.price * product.discount) / 100).toFixed(
+      2
+    )} DKK`;
+  } else x = `${product.price} DKK`;
 
   document.querySelector(".info .price").textContent = x;
 
