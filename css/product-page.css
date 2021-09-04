@@ -1,59 +1,25 @@
-ul > li,
-a {
-  color: #b93c96d6;
-}
-
-body {
+.product-page {
   overflow-x: hidden;
 }
 
-nav {
+.product-page nav {
   display: inline-block;
 }
 
-nav > a {
+.product-page nav a {
   margin-left: 2.5rem;
   text-decoration: underline;
 }
 
-main {
+.product-page main {
   margin: calc((100vh / 25) * 1.563) calc((100vw / 25) * 1.563);
-}
-
-ul {
-  font-family: brother-1816, sans-serif;
-  font-weight: 500;
-  font-style: normal;
-
-  background-color: #f585493b;
-
-  font-size: 1.5rem;
-  list-style-type: none;
-  padding: 0;
-  display: flex;
-  width: 100%;
-  justify-content: initial;
-  padding-left: 2.5rem;
-}
-
-ul > li > a {
-  text-decoration: underline;
-  margin-right: 0.5rem;
-}
-
-li::after {
-  display: inline-block;
-  width: 10px;
-  height: 10px;
-  margin: 0 10px;
-  content: "";
 }
 
 .container {
   display: flex;
 }
 
-.container > img {
+.container img {
   width: 70%;
   height: 100%;
   object-fit: cover;
@@ -68,6 +34,7 @@ label {
 h3 {
   font-size: 2rem;
 }
+
 .info {
   background-color: #f585493b;
   padding: 0.5rem 1.25rem;

@@ -1,8 +1,8 @@
-body {
+.product-list {
   overflow-x: hidden;
 }
 
-main {
+.product-list main {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(150px, 300px));
   gap: 2rem;
@@ -38,11 +38,11 @@ small {
   font-size: initial;
 }
 
-h3 {
+h4 {
   color: black;
 }
 
-.item > p {
+.item p {
   color: #ef27a6;
   font-weight: 900;
   font-size: 1.3rem;
@@ -56,10 +56,6 @@ h3 {
   padding: 1rem;
 }
 
-.soldOut > img {
+.soldOut img {
   opacity: 0.5;
-}
-
-.hidden {
-  visibility: hidden;
 }

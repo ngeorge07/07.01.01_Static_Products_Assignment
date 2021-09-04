@@ -81,7 +81,7 @@ function showProduct(product) {
     clone.querySelector(".item p").appendChild(span);
   }
 
-  clone.querySelector(".item h3").textContent = product.productdisplayname;
+  clone.querySelector(".item h4").textContent = product.productdisplayname;
 
   //grab parent
   const parent = document.querySelector("main");
